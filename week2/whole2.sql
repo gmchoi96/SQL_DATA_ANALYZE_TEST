@@ -50,11 +50,29 @@ WHERE first_order_date >= '2025-01-01'
 GROUP BY purchase_month
 ORDER BY purchase_month;
 -- 8. 상품별 매출이 전체 매출에서 차지하는 비율 / 각 상품이 전체 매출에 얼마나 기여하는지
+with product_sales as (
+    SELECT
+        p.product_id,
+        p.product_name,
+        p.category,
+        SUM(oi.quantity * oi.unit_price) AS total_sales
+    FROM orders AS o
+    INNER JOIN order_items AS oi
+        ON o.order_id = oi.order_id
+    INNER JOIN products AS p
+        ON oi.product_id = p.product_id
+    WHERE o.order_status = 'DELIVERED'
+    GROUP BY
+        p.product_id,
+        p.product_name,
+        p.category
+)
+
 select
-	p.product_name,
-    p.category,
-	sum(oi.quantity * oi.unit_price) as amount_product
-from products as p
-left join order_items as oi
-	on p.product_id = oi.product_id
-group by oi.order_id    
+	product_id,
+    product_name,
+    category,
+    total_sales,
+	(total_sales/nullif(sum(total_sales) OVER (),0))*100 as percent
+from product_sales
+order by percent desc;
