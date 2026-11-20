@@ -1,0 +1,31 @@
+product_id,product_name,category,unit_price
+1,ELEC_Item_01,Electronics,49000
+2,BEAU_Item_02,Beauty,24000
+3,FASH_Item_03,Fashion,45000
+4,ELEC_Item_04,Electronics,490000
+5,ELEC_Item_05,Electronics,490000
+6,HOME_Item_06,Home & Living,19000
+7,ELEC_Item_07,Electronics,49000
+8,FASH_Item_08,Fashion,45000
+9,SPOR_Item_09,Sports,160000
+10,ELEC_Item_10,Electronics,490000
+11,FASH_Item_11,Fashion,149000
+12,HOME_Item_12,Home & Living,39000
+13,HOME_Item_13,Home & Living,120000
+14,BEAU_Item_14,Beauty,15000
+15,FASH_Item_15,Fashion,99000
+16,BEAU_Item_16,Beauty,35000
+17,FASH_Item_17,Fashion,45000
+18,BEAU_Item_18,Beauty,15000
+19,ELEC_Item_19,Electronics,250000
+20,ELEC_Item_20,Electronics,129000
+21,BEAU_Item_21,Beauty,78000
+22,BEAU_Item_22,Beauty,15000
+23,HOME_Item_23,Home & Living,120000
+24,ELEC_Item_24,Electronics,250000
+25,ELEC_Item_25,Electronics,490000
+26,BEAU_Item_26,Beauty,78000
+27,BEAU_Item_27,Beauty,78000
+28,FASH_Item_28,Fashion,29000
+29,ELEC_Item_29,Electronics,89000
+30,BEAU_Item_30,Beauty,15000
